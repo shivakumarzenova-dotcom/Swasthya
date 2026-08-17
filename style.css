@@ -978,3 +978,704 @@ button {
         right: -5px;
     }
 }
+/* =====================================================
+   PART 2 — BENEFITS STRIP
+===================================================== */
+
+.benefits-strip {
+
+    width: 100%;
+
+    background: #0d4b2f;
+
+    color: #ffffff;
+
+    padding: 23px 0;
+}
+
+
+.benefits-container {
+
+    width: min(1320px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    align-items: center;
+}
+
+
+.benefit-item {
+
+    min-height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    padding: 0 25px;
+
+    border-right:
+        1px solid rgba(220, 232, 201, 0.30);
+}
+
+
+.benefit-item:last-child {
+
+    border-right: none;
+}
+
+
+/* Benefit circle */
+
+.benefit-icon {
+
+    width: 43px;
+
+    height: 43px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(225, 214, 155, 0.85);
+
+    color: #ddd19a;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 19px;
+
+    background:
+        rgba(255,255,255,0.03);
+}
+
+
+/* Benefit text */
+
+.benefit-content h3 {
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 5px;
+
+    color: #ffffff;
+}
+
+
+.benefit-content p {
+
+    font-size: 10px;
+
+    line-height: 1.45;
+
+    color:
+        rgba(255,255,255,0.78);
+
+    max-width: 170px;
+}
+
+
+
+/* =====================================================
+   PART 2 — AYURVEDA SECTION
+===================================================== */
+
+.ayurveda-section {
+
+    width: 100%;
+
+    background: #f8f6ed;
+
+    padding:
+        68px 0 65px;
+}
+
+
+.ayurveda-container {
+
+    width: min(1320px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.35fr 3.4fr 1.35fr;
+
+    gap: 28px;
+
+    align-items: center;
+}
+
+
+
+/* =====================================================
+   AYURVEDA INTRO
+===================================================== */
+
+.ayurveda-intro {
+
+    padding-right: 12px;
+}
+
+
+.section-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #37683a;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 13px;
+}
+
+
+.section-label span {
+
+    font-size: 10px;
+
+    color: #5a8749;
+}
+
+
+.ayurveda-intro h2 {
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    color: #17482f;
+
+    font-size: 31px;
+
+    line-height: 1.15;
+
+    font-weight: 600;
+
+    letter-spacing: -0.5px;
+
+    margin-bottom: 18px;
+}
+
+
+.ayurveda-intro > p {
+
+    color: #536156;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    max-width: 285px;
+
+    margin-bottom: 22px;
+}
+
+
+/* Know More */
+
+.know-more-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 38px;
+
+    padding: 0 20px;
+
+    background: #0d4b2f;
+
+    color: white;
+
+    border-radius: 4px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+
+.know-more-button:hover {
+
+    background: #073c26;
+
+    transform: translateY(-2px);
+}
+
+
+
+/* =====================================================
+   INGREDIENTS GRID
+===================================================== */
+
+.ingredients-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    align-items: start;
+
+    gap: 8px;
+}
+
+
+.ingredient-card {
+
+    text-align: center;
+
+    padding:
+        0 8px;
+
+    position: relative;
+}
+
+
+/* Vertical separators */
+
+.ingredient-card:not(:last-child)::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 80px;
+
+    background:
+        rgba(20, 59, 41, 0.12);
+
+    right: -4px;
+
+    top: 30px;
+}
+
+
+/* Ingredient image */
+
+.ingredient-image {
+
+    width: 74px;
+
+    height: 74px;
+
+    margin: 0 auto 11px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: #ecebdc;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.ingredient-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.ingredient-card h3 {
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    color: #19492f;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+
+.ingredient-card p {
+
+    color: #526157;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+
+/* =====================================================
+   RATING CARD
+===================================================== */
+
+.rating-card {
+
+    min-height: 180px;
+
+    background:
+        #eee9d8;
+
+    border-radius: 15px;
+
+    padding:
+        24px 15px;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.rating-decoration {
+
+    position: absolute;
+
+    top: -5px;
+
+    left: 8px;
+
+    font-size: 58px;
+
+    color:
+        rgba(91, 125, 65, 0.08);
+}
+
+
+.rating-card h3 {
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    color: #244c35;
+
+    font-size: 15px;
+
+    line-height: 1.2;
+
+    margin-bottom: 11px;
+
+    position: relative;
+}
+
+
+.rating-score {
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    color: #17482f;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    display: inline-block;
+}
+
+
+.stars {
+
+    color: #d7a82e;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    margin:
+        2px 0 6px;
+}
+
+
+.rating-card > p {
+
+    font-size: 8px;
+
+    color: #59645a;
+
+    margin-bottom: 10px;
+}
+
+
+
+/* =====================================================
+   CUSTOMER AVATARS
+===================================================== */
+
+.customer-avatars {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.avatar {
+
+    width: 27px;
+
+    height: 27px;
+
+    border-radius: 50%;
+
+    background:
+        #b8c7a8;
+
+    border:
+        2px solid #eee9d8;
+
+    margin-left: -6px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #285239;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+.avatar:first-child {
+
+    margin-left: 0;
+}
+
+
+
+/* =====================================================
+   PART 2 RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .benefits-container {
+
+        width: 94%;
+    }
+
+    .benefit-item {
+
+        padding: 0 12px;
+
+        gap: 9px;
+    }
+
+    .ayurveda-container {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 40px;
+    }
+
+    .ayurveda-intro {
+
+        text-align: center;
+
+        padding: 0;
+    }
+
+    .ayurveda-intro > p {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .section-label {
+
+        justify-content: center;
+    }
+
+    .ingredients-grid {
+
+        max-width: 650px;
+
+        margin: 0 auto;
+
+        width: 100%;
+    }
+
+    .rating-card {
+
+        width: 300px;
+
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .benefits-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 18px 0;
+    }
+
+    .benefit-item {
+
+        border-right: none;
+
+        border-bottom:
+            1px solid
+            rgba(220, 232, 201, 0.20);
+
+        padding:
+            10px;
+    }
+
+    .benefit-item:nth-child(3),
+    .benefit-item:nth-child(4) {
+
+        border-bottom: none;
+    }
+
+    .ingredients-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        row-gap: 35px;
+    }
+
+    .ingredient-card:nth-child(2)::after {
+
+        display: none;
+    }
+
+    .ingredient-card:nth-child(4)::after {
+
+        display: none;
+    }
+
+    .ingredient-card:nth-child(1)::after,
+    .ingredient-card:nth-child(3)::after {
+
+        height: 90px;
+
+        right: -1px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .benefits-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-item {
+
+        border-bottom:
+            1px solid
+            rgba(220, 232, 201, 0.20) !important;
+    }
+
+    .benefit-item:last-child {
+
+        border-bottom: none !important;
+    }
+
+    .ayurveda-section {
+
+        padding:
+            50px 0;
+    }
+
+    .ayurveda-intro h2 {
+
+        font-size: 27px;
+    }
+
+    .ingredients-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 25px 5px;
+    }
+
+    .ingredient-card::after {
+
+        display: none !important;
+    }
+
+    .rating-card {
+
+        width: 100%;
+
+        max-width: 300px;
+    }
+}
