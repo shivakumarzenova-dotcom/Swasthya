@@ -1,0 +1,980 @@
+/* =========================================
+   GLOBAL SETTINGS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+    color: #143b29;
+    background: #f8f6ed;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   BRAND COLORS
+========================================= */
+
+:root {
+
+    --dark-green: #0d4b2f;
+
+    --deep-green: #073c26;
+
+    --medium-green: #39783f;
+
+    --light-green: #dce8c9;
+
+    --cream: #f7f4e8;
+
+    --soft-cream: #eee9d7;
+
+    --white: #ffffff;
+
+    --gold: #c9a84c;
+
+    --text-dark: #153c2a;
+
+    --text-light: #f8f7ed;
+}
+
+
+/* =========================================
+   ANNOUNCEMENT BAR
+========================================= */
+
+.announcement-bar {
+
+    width: 100%;
+
+    height: 30px;
+
+    background: var(--dark-green);
+
+    color: #f4f1df;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.15px;
+}
+
+.announcement-bar span:first-child {
+    color: #d7c25e;
+}
+
+.announcement-divider {
+    opacity: 0.5;
+    margin: 0 4px;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    width: 100%;
+
+    height: 82px;
+
+    background: rgba(250, 249, 242, 0.98);
+
+    border-bottom: 1px solid rgba(20, 59, 41, 0.05);
+
+    position: relative;
+
+    z-index: 20;
+}
+
+.nav-container {
+
+    width: min(1400px, 92%);
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.brand-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.brand-logo img {
+
+    width: 135px;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
+.main-navigation {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 31px;
+
+    flex: 1;
+}
+
+.main-navigation a {
+
+    position: relative;
+
+    color: #1c3327;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    padding: 31px 0;
+
+    white-space: nowrap;
+
+    transition: color 0.25s ease;
+}
+
+.main-navigation a:hover {
+    color: var(--dark-green);
+}
+
+.main-navigation a.active {
+    color: var(--dark-green);
+}
+
+.main-navigation a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 22px;
+
+    height: 2px;
+
+    background: var(--dark-green);
+
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   NAV ACTIONS
+========================================= */
+
+.nav-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-shrink: 0;
+}
+
+.icon-button {
+
+    width: 25px;
+
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    color: var(--dark-green);
+
+    position: relative;
+}
+
+
+/* Search Icon */
+
+.search-icon {
+
+    width: 15px;
+
+    height: 15px;
+
+    border: 1.7px solid var(--dark-green);
+
+    border-radius: 50%;
+
+    position: relative;
+
+    display: block;
+}
+
+.search-icon::after {
+
+    content: "";
+
+    width: 6px;
+
+    height: 1.5px;
+
+    background: var(--dark-green);
+
+    position: absolute;
+
+    right: -4px;
+
+    bottom: -2px;
+
+    transform: rotate(45deg);
+}
+
+
+/* User */
+
+.user-icon {
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    transform: rotate(180deg);
+
+    display: block;
+}
+
+
+/* Shopping Bag */
+
+.bag-icon {
+
+    width: 15px;
+
+    height: 15px;
+
+    border: 1.5px solid var(--dark-green);
+
+    border-radius: 2px;
+
+    position: relative;
+
+    display: block;
+}
+
+.bag-icon::before {
+
+    content: "";
+
+    width: 7px;
+
+    height: 5px;
+
+    border: 1.5px solid var(--dark-green);
+
+    border-bottom: none;
+
+    border-radius: 7px 7px 0 0;
+
+    position: absolute;
+
+    top: -6px;
+
+    left: 2.5px;
+}
+
+.bag-count {
+
+    position: absolute;
+
+    right: -5px;
+
+    top: 2px;
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: var(--dark-green);
+
+    color: white;
+
+    font-size: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Shop Button */
+
+.nav-shop-button {
+
+    background: var(--dark-green);
+
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    margin-left: 5px;
+
+    transition: all 0.25s ease;
+}
+
+.nav-shop-button:hover {
+
+    background: #073c26;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-section {
+
+    position: relative;
+
+    min-height: 535px;
+
+    background-color: #eee9d4;
+
+    background-image:
+        url("assets/hero-background.jpg");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    overflow: hidden;
+}
+
+
+/* Soft overlay */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(246, 243, 225, 0.93) 0%,
+            rgba(246, 243, 225, 0.78) 36%,
+            rgba(246, 243, 225, 0.20) 70%,
+            rgba(246, 243, 225, 0.05) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   HERO CONTAINER
+========================================= */
+
+.hero-container {
+
+    width: min(1400px, 92%);
+
+    min-height: 535px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+
+    padding-left: 18px;
+
+    padding-top: 5px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* Small label */
+
+.hero-label {
+
+    color: var(--dark-green);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 15px;
+}
+
+.hero-label > span:first-child {
+
+    font-size: 10px;
+
+    color: var(--medium-green);
+}
+
+.small-arrow {
+
+    font-size: 14px;
+
+    margin-left: 1px;
+}
+
+
+/* Main heading */
+
+.hero-content h1 {
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    color: #12472f;
+
+    font-size: clamp(48px, 5vw, 72px);
+
+    line-height: 1.04;
+
+    letter-spacing: -2px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+/* Description */
+
+.hero-description {
+
+    max-width: 450px;
+
+    color: #263e32;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.primary-button,
+.secondary-button {
+
+    height: 41px;
+
+    padding: 0 22px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+
+/* Primary */
+
+.primary-button {
+
+    background: var(--dark-green);
+
+    color: white;
+
+    gap: 8px;
+}
+
+.primary-button:hover {
+
+    background: #073c26;
+
+    transform: translateY(-2px);
+}
+
+.primary-button span {
+
+    color: #d9c96b;
+
+    font-size: 11px;
+}
+
+
+/* Secondary */
+
+.secondary-button {
+
+    background: rgba(255, 255, 255, 0.35);
+
+    border: 1px solid #50735d;
+
+    color: var(--dark-green);
+}
+
+.secondary-button:hover {
+
+    background: rgba(255,255,255,0.7);
+}
+
+
+/* =========================================
+   HERO FEATURES
+========================================= */
+
+.hero-features {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+}
+
+.hero-feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #254332;
+
+    font-size: 10px;
+
+    font-weight: 500;
+}
+
+.feature-circle {
+
+    width: 22px;
+
+    height: 22px;
+
+    border-radius: 50%;
+
+    border: 1px solid #65856c;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 10px;
+
+    color: var(--dark-green);
+
+    background: rgba(255,255,255,0.25);
+}
+
+
+/* =========================================
+   PRODUCT AREA
+========================================= */
+
+.hero-product-area {
+
+    height: 100%;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Product */
+
+.hero-product {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(390px, 65%);
+
+    max-height: 470px;
+
+    object-fit: contain;
+
+    filter: drop-shadow(
+        15px 18px 15px rgba(38, 51, 32, 0.22)
+    );
+
+    transform: translate(15px, 5px);
+}
+
+
+/* =========================================
+   RIGHT TRUST BADGE
+========================================= */
+
+.trust-badge {
+
+    position: absolute;
+
+    right: 0;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 72px;
+
+    padding: 14px 8px;
+
+    background: rgba(12, 72, 43, 0.91);
+
+    border: 1px solid rgba(255,255,255,0.75);
+
+    border-radius: 13px;
+
+    z-index: 10;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 13px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.trust-item {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 1px;
+}
+
+.trust-icon {
+
+    width: 25px;
+
+    height: 25px;
+
+    border: 1px solid rgba(226, 218, 166, 0.9);
+
+    border-radius: 50%;
+
+    color: #e0d596;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 11px;
+
+    margin-bottom: 3px;
+}
+
+.trust-item span {
+
+    font-size: 9px;
+
+    line-height: 1.2;
+
+    font-weight: 500;
+}
+
+.trust-item small {
+
+    font-size: 8px;
+
+    opacity: 0.85;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .main-navigation {
+        gap: 18px;
+    }
+
+    .main-navigation a {
+        font-size: 11px;
+    }
+
+    .hero-container {
+        grid-template-columns: 48% 52%;
+    }
+
+    .hero-content h1 {
+        font-size: 52px;
+    }
+
+    .hero-product {
+        width: 72%;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    .navbar {
+        height: auto;
+    }
+
+    .nav-container {
+        padding: 16px 0;
+        flex-wrap: wrap;
+    }
+
+    .main-navigation {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 5px;
+    }
+
+    .main-navigation a {
+        padding: 10px 0;
+    }
+
+    .main-navigation a.active::after {
+        bottom: 2px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .hero-label,
+    .hero-buttons,
+    .hero-features {
+        justify-content: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-product-area {
+        min-height: 390px;
+    }
+
+    .hero-product {
+        width: 320px;
+    }
+
+    .trust-badge {
+        right: 2%;
+    }
+}
+
+
+@media (max-width: 560px) {
+
+    .announcement-bar {
+        font-size: 8px;
+        padding: 0 8px;
+        text-align: center;
+    }
+
+    .brand-logo img {
+        width: 110px;
+    }
+
+    .nav-actions {
+        gap: 7px;
+    }
+
+    .nav-shop-button {
+        padding: 10px 12px;
+    }
+
+    .hero-section,
+    .hero-container {
+        min-height: auto;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+        letter-spacing: -1.2px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 190px;
+    }
+
+    .hero-features {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero-product-area {
+        min-height: 330px;
+    }
+
+    .hero-product {
+        width: 260px;
+    }
+
+    .trust-badge {
+        width: 62px;
+        right: -5px;
+    }
+}
